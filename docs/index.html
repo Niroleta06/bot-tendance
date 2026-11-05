@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bot Tendance</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#14181f;--mute:#5b6573;--line:#e3e6ea;--up:#0a7d4f;--down:#c0352b;--acc:#2b5fd9;--warn:#9a6700;--chip:#eef1f5}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--ink:#e6edf3;--mute:#8b96a3;--line:#262d36;--up:#3fb97a;--down:#f0675c;--acc:#6b9bff;--warn:#d4a72c;--chip:#1f262f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:0}
+.sub{color:var(--mute);font-size:13px;margin-top:2px}
+.badge{display:inline-block;background:var(--chip);color:var(--warn);border-radius:99px;padding:2px 10px;font-size:12px;font-weight:600;margin-top:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:12px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.tab{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:10px 8px;text-align:left;cursor:pointer;color:var(--ink);font:inherit}
+.tab[aria-pressed=true]{border-color:var(--acc)}
+.tab .n{font-size:12px;color:var(--mute)}
+.tab .v{font-size:19px;font-weight:700}
+.up{color:var(--up)}.down{color:var(--down)}
+.big{font-size:30px;font-weight:700;line-height:1.1}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin-top:12px}
+.k{color:var(--mute);font-size:12px}.val{font-weight:600}
+h2{font-size:15px;margin:22px 0 0;letter-spacing:.2px}
+.pos-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.tok{font-size:18px;font-weight:700}
+.chip{display:inline-block;background:var(--chip);border-radius:8px;padding:1px 8px;font-size:12px;font-weight:600;margin-left:6px}
+.rows{margin-top:10px}.r{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-top:1px solid var(--line)}
+.r span:first-child{color:var(--mute)}.r span:last-child{text-align:right;font-weight:600}
+.why{margin-top:8px;font-size:13px;color:var(--mute)}
+.note{font-size:12px;color:var(--mute);margin-top:8px}
+.sig{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:center}
+.ok{color:var(--up)}.no{color:var(--down)}
+svg{width:100%;height:auto;display:block}
+.leg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;margin-top:6px}
+.leg i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:5px;border-radius:2px}
+.empty{color:var(--mute);padding:6px 0}
+footer{color:var(--mute);font-size:12px;margin:22px 0 30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Bot Tendance</h1>
+  <div class="sub" id="maj">Chargement…</div>
+  <span class="badge">SIMULATION · aucun argent réel</span>
+  <div class="tabs" id="tabs"></div>
+  <div id="contenu"></div>
+  <footer id="pied"></footer>
+</div>
+<script>
+const REPO = "Niroleta06/bot-tendance";
+const URLS = ["https://raw.githubusercontent.com/" + REPO + "/main/docs/data/state.json", "data/state.json"];
+const COUL = {A:"#2b5fd9", B:"#d98a2b", C:"#8a4fd1", G:"#8b96a3"};
+let ETAT = null, SEL = "A";
+
+const fmt = (x, d=2) => Number(x).toLocaleString("fr-FR", {minimumFractionDigits:d, maximumFractionDigits:d});
+const usd = (x, d=2) => fmt(x, d) + " $";
+const pct = (x, d=2) => (x > 0 ? "+" : "") + fmt(x, d) + " %";
+const cls = x => x > 0 ? "up" : (x < 0 ? "down" : "");
+const prix = x => x >= 1000 ? fmt(x, 0) : (x >= 10 ? fmt(x, 2) : fmt(x, 4));
+function el(t, c, h){const e=document.createElement(t); if(c) e.className=c; if(h!==undefined) e.textContent=h; return e;}
+function depuis(iso){const j=(Date.now()-new Date(iso))/86400000; return j<1 ? Math.max(1,Math.round(j*24))+" h" : fmt(j,1)+" j";}
+function quand(iso){return new Date(iso).toLocaleString("fr-FR",{timeZone:"Europe/Paris",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});}
+
+async function charger(){
+  for (const u of URLS){
+    try{
+      const c = new AbortController(); const t = setTimeout(()=>c.abort(), 8000);
+      const r = await fetch(u + (u.includes("?")?"&":"?") + "t=" + Date.now(), {signal:c.signal, cache:"no-store"});
+      clearTimeout(t); if(!r.ok) continue;
+      return await r.json();
+    }catch(e){}
+  }
+  return null;
+}
+
+function rendre(){
+  const V = ETAT.vue; if(!V){document.getElementById("maj").textContent="Pas encore de données."; return;}
+  const min = (Date.now()-new Date(V.maj))/60000;
+  document.getElementById("maj").textContent = "Mis à jour le " + quand(V.maj) + " (il y a " + (min<90 ? Math.round(min)+" min" : fmt(min/60,1)+" h") + ")";
+  const tabs = document.getElementById("tabs"); tabs.innerHTML = "";
+  for (const k of Object.keys(V.variantes)){
+    const v = V.variantes[k]; const b = el("button","tab"); b.setAttribute("aria-pressed", k===SEL);
+    b.append(el("div","n", v.nom), el("div","v "+cls(v.pct), pct(v.pct)));
+    b.onclick = () => {SEL = k; rendre();}; tabs.append(b);
+  }
+  const root = document.getElementById("contenu"); root.innerHTML = "";
+  const v = V.variantes[SEL];
+  // résumé
+  const c1 = el("div","card");
+  c1.append(el("div","k","Compte simulé (départ " + usd(V.parametres.capital,0) + ")"));
+  c1.append(el("div","big", usd(v.equity)));
+  c1.append(el("div","val "+cls(v.pct), pct(v.pct) + " net depuis le départ (frais et funding compris)"));
+  const g = el("div","grid");
+  const cell = (k,val,c) => {const d=el("div"); d.append(el("div","k",k), el("div","val "+(c||""),val)); g.append(d);};
+  cell("Garder BTC+ETH+SOL", pct(V.garder.pct), cls(V.garder.pct));
+  cell("Écart avec « garder »", pct(v.pct - V.garder.pct), cls(v.pct - V.garder.pct));
+  cell("Baisse maximale subie", "−" + fmt(v.baisse_max_pct,1) + " %");
+  cell("Levier effectif", "×" + fmt(v.levier_effectif,2));
+  cell("Trades clos", v.nb_trades + " (" + v.gagnants + " gagnants)");
+  cell("Frais + funding payés", usd(v.frais + v.funding));
+  c1.append(g); root.append(c1);
+  // positions
+  root.append(el("h2",null,"Positions en cours"));
+  if(!v.positions.length){root.append(el("div","card empty","Aucune position : les prix sont sous leurs moyennes, le bot reste en liquidités."));}
+  for (const p of v.positions){
+    const c = el("div","card");
+    const h = el("div","pos-h"); const l = el("div"); l.append(el("span","tok",p.token), el("span","chip",p.sens+" ×"+fmt(p.levier,1)), el("span","chip","étage "+p.etage+"/3"));
+    const r = el("div","val "+cls(p.pnl_pct_compte)); r.textContent = pct(p.pnl_pct_compte) + " du compte"; h.append(l,r); c.append(h);
+    const rows = el("div","rows");
+    const row = (a,b,c2) => {const d=el("div","r"); d.append(el("span",null,a), el("span",c2||"",b)); rows.append(d);};
+    row("Taille", usd(p.valeur) + " (" + fmt(p.pct_compte,0) + " % du compte)");
+    row("Prix d'entrée → actuel", prix(p.prix_entree) + " → " + prix(p.prix));
+    row("Variation du prix", pct(p.variation_prix_pct), cls(p.variation_prix_pct));
+    row("Résultat net (frais inclus)", usd(p.pnl_net_usd), cls(p.pnl_net_usd));
+    row("Stop de protection", prix(p.stop_protection) + " (" + fmt(p.stop_dist_pct,1) + " %)");
+    row("Sortie de tendance (tout vendre)", prix(p.sortie_totale) + " (" + fmt(p.sortie_dist_pct,1) + " %)");
+    if(p.reduction_prochaine) row("Prochaine réduction (moyenne)", prix(p.reduction_prochaine));
+    row("Ouvert depuis", depuis(p.ouverture));
+    c.append(rows);
+    c.append(el("div","why","Pourquoi : " + p.raison));
+    c.append(el("div","note","Le niveau de sortie suit une moyenne mobile : il monte quand le prix monte. Le stop de protection est un filet à 8 ATR sous l'entrée."));
+    root.append(c);
+  }
+  // signaux
+  root.append(el("h2",null,"Signaux du jour (bougie quotidienne fermée)"));
+  for (const t of Object.keys(V.tokens)){
+    const s = V.tokens[t]; const c = el("div","card");
+    const h = el("div","pos-h"); h.append(el("span","tok",t), el("span","val", prix(s.prix) + " $")); c.append(h);
+    const sg = el("div","sig"); c.append(sg);
+    const mm = (n, m) => { sg.append(el("span","k","MM"+n+" "+prix(m)), el("span", s.cloture>m?"ok":"no", s.cloture>m ? "prix au-dessus ✓" : "prix en dessous ✗")); };
+    mm(50,s.m50); mm(100,s.m100); mm(200,s.m200);
+    c.append(el("div","note","Étage " + s.etage + "/3 · distance à la MM50 : " + fmt(s.dist_atr,1) + " ATR"));
+    root.append(c);
+  }
+  // courbe
+  root.append(el("h2",null,"Évolution (en % depuis le départ)"));
+  root.append(courbe(V));
+  // trades
+  root.append(el("h2",null,"Derniers trades clos"));
+  if(!v.trades_recents.length) root.append(el("div","card empty","Aucun trade clos pour l'instant."));
+  for (const x of v.trades_recents){
+    const c = el("div","card");
+    const h = el("div","pos-h"); h.append(el("span","tok",x.token+" ×"+fmt(x.levier_max,1)), el("span","val "+cls(x.net_usd), usd(x.net_usd))); c.append(h);
+    c.append(el("div","note", quand(x.ouverture)+" → "+quand(x.cloture)+" · "+fmt(x.duree_jours,1)+" j · prix "+pct(x.variation_prix_pct)));
+    c.append(el("div","why",x.raison_sortie));
+    root.append(c);
+  }
+  const P = V.parametres;
+  document.getElementById("pied").textContent = "Simulation sur prix réels (" + [...new Set(Object.values(V.sources))].join(", ") + "). Frais " + P.frais_pct + " % par transaction, funding simulé " + P.funding_an_pct + " %/an, stop de protection " + P.stop_atr + " ATR. Les résultats passés ne garantissent rien. Ceci n'est pas un conseil financier.";
+}
+
+function courbe(V){
+  const c = el("div","card");
+  const series = {};
+  for (const k of Object.keys(V.variantes)){
+    const h = ETAT.variantes[k].historique.map(a=>[a[0], a[1]]); h.push(["maintenant", V.variantes[k].equity]); series[k]=h;
+  }
+  const bh = ETAT.bh_historique.map(a=>[a[0],a[1]]); bh.push(["maintenant", V.garder.equity]); series.G = bh;
+  const n = Math.max(...Object.values(series).map(s=>s.length));
+  if(n < 3){c.append(el("div","empty","La courbe apparaîtra après quelques jours de fonctionnement.")); return c;}
+  const cap = V.parametres.capital; const W=640,H=240,pl=44,pr=8,pt=10,pb=20;
+  let lo=0, hi=0; for(const s of Object.values(series)) for(const p of s){const y=(p[1]/cap-1)*100; lo=Math.min(lo,y); hi=Math.max(hi,y);}
+  if(hi-lo<2){hi+=1;lo-=1;}
+  const X = (i,len) => pl + (W-pl-pr) * (len<2?0:i/(len-1)), Y = y => pt + (H-pt-pb) * (1 - (y-lo)/(hi-lo));
+  const ns="http://www.w3.org/2000/svg"; const svg=document.createElementNS(ns,"svg"); svg.setAttribute("viewBox","0 0 "+W+" "+H);
+  const add=(t,a,txt)=>{const e=document.createElementNS(ns,t); for(const k in a) e.setAttribute(k,a[k]); if(txt!==undefined) e.textContent=txt; svg.append(e); return e;};
+  for(let i=0;i<=4;i++){const y=lo+(hi-lo)*i/4; const yy=Y(y); add("line",{x1:pl,x2:W-pr,y1:yy,y2:yy,stroke:"currentColor","stroke-opacity":.12}); add("text",{x:pl-6,y:yy+4,"text-anchor":"end","font-size":11,fill:"currentColor","fill-opacity":.6}, fmt(y,0)+" %");}
+  if(lo<0&&hi>0) add("line",{x1:pl,x2:W-pr,y1:Y(0),y2:Y(0),stroke:"currentColor","stroke-opacity":.35,"stroke-dasharray":"4 3"});
+  for(const k of ["G","A","B","C"]){ const s=series[k]; if(!s) continue;
+    const pts = s.map((p,i)=>X(i,s.length)+","+Y((p[1]/cap-1)*100)).join(" ");
+    add("polyline",{points:pts,fill:"none",stroke:COUL[k],"stroke-width":k===SEL?3:1.6,"stroke-opacity":k===SEL||k==="G"?1:.6,"stroke-dasharray":k==="G"?"5 4":"0"});}
+  c.append(svg);
+  const leg=el("div","leg"); const add2=(k,t)=>{const s=el("span"); const i=el("i"); i.style.background=COUL[k]; s.append(i, document.createTextNode(t)); leg.append(s);};
+  add2("A","A ×1"); add2("B","B ×1,5"); add2("C","C modulé"); add2("G","Garder les 3"); c.append(leg);
+  return c;
+}
+
+(async()=>{
+  ETAT = await charger();
+  if(!ETAT){document.getElementById("maj").textContent = "Aucune donnée pour l'instant : lance le bot depuis l'onglet Actions de GitHub."; return;}
+  rendre();
+})();
+</script>
+</body>
+</html>
