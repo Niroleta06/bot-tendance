@@ -1,0 +1,537 @@
+{
+ "version": 1,
+ "cree": "2026-11-05T15:07:36.596114+00:00",
+ "capital": 1000.0,
+ "derniere_maj": "2026-11-05T15:07:36.596114+00:00",
+ "dernier_jour": "2026-11-04",
+ "base_prix": {
+  "BTC": 77545.0,
+  "ETH": 2326.3,
+  "SOL": 92.35
+ },
+ "bh_historique": [
+  [
+   "2026-11-04",
+   1000.0
+  ]
+ ],
+ "variantes": {
+  "A": {
+   "cash": 444.0277777777777,
+   "positions": {
+    "BTC": {
+     "unites": 0.0028657195463565955,
+     "prix_moyen": 77545.0,
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "stop": 59670.78738212763,
+     "frais": 0.16666666666666666,
+     "funding": 0.0,
+     "realise": 0.0,
+     "levier_max": 1.0,
+     "etape": 0.6666666666666666,
+     "levier": 1.0,
+     "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.7 ATR -> levier x1",
+     "mise_initiale": 222.2222222222222
+    },
+    "ETH": {
+     "unites": 0.09552603800981051,
+     "prix_moyen": 2326.3,
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "stop": 1589.075338030322,
+     "frais": 0.16666666666666666,
+     "funding": 0.0,
+     "realise": 0.0,
+     "levier_max": 1.0,
+     "etape": 0.6666666666666666,
+     "levier": 1.0,
+     "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.9 ATR -> levier x1",
+     "mise_initiale": 222.2222222222222
+    },
+    "SOL": {
+     "unites": 1.203152258918366,
+     "prix_moyen": 92.35,
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "stop": 56.01094369795381,
+     "frais": 0.08333333333333333,
+     "funding": 0.0,
+     "realise": 0.0,
+     "levier_max": 1.0,
+     "etape": 0.3333333333333333,
+     "levier": 1.0,
+     "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.9 ATR -> levier x1",
+     "mise_initiale": 111.1111111111111
+    }
+   },
+   "attente": {
+    "BTC": 0,
+    "ETH": 0,
+    "SOL": 0
+   },
+   "trades": [],
+   "historique": [
+    [
+     "2026-11-04",
+     999.58
+    ]
+   ],
+   "frais": 0.41666666666666663,
+   "funding": 0.0,
+   "pic": 1000.0,
+   "dd_max": 0.0004166666666667318
+  },
+  "B": {
+   "cash": 166.04166666666677,
+   "positions": {
+    "BTC": {
+     "unites": 0.004298579319534894,
+     "prix_moyen": 77545.0,
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "stop": 59670.78738212763,
+     "frais": 0.25,
+     "funding": 0.0,
+     "realise": 0.0,
+     "levier_max": 1.5,
+     "etape": 0.6666666666666666,
+     "levier": 1.5,
+     "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.7 ATR -> levier x1.5",
+     "mise_initiale": 333.3333333333333
+    },
+    "ETH": {
+     "unites": 0.14328905701471575,
+     "prix_moyen": 2326.3,
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "stop": 1589.075338030322,
+     "frais": 0.25,
+     "funding": 0.0,
+     "realise": 0.0,
+     "levier_max": 1.5,
+     "etape": 0.6666666666666666,
+     "levier": 1.5,
+     "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.9 ATR -> levier x1.5",
+     "mise_initiale": 333.3333333333333
+    },
+    "SOL": {
+     "unites": 1.8047283883775491,
+     "prix_moyen": 92.35,
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "stop": 56.01094369795381,
+     "frais": 0.125,
+     "funding": 0.0,
+     "realise": 0.0,
+     "levier_max": 1.5,
+     "etape": 0.3333333333333333,
+     "levier": 1.5,
+     "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.9 ATR -> levier x1.5",
+     "mise_initiale": 166.66666666666666
+    }
+   },
+   "attente": {
+    "BTC": 0,
+    "ETH": 0,
+    "SOL": 0
+   },
+   "trades": [],
+   "historique": [
+    [
+     "2026-11-04",
+     999.38
+    ]
+   ],
+   "frais": 0.625,
+   "funding": 0.0,
+   "pic": 1000.0,
+   "dd_max": 0.0006249999999999867
+  },
+  "C": {
+   "cash": 444.0277777777777,
+   "positions": {
+    "BTC": {
+     "unites": 0.0028657195463565955,
+     "prix_moyen": 77545.0,
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "stop": 59670.78738212763,
+     "frais": 0.16666666666666666,
+     "funding": 0.0,
+     "realise": 0.0,
+     "levier_max": 1.0,
+     "etape": 0.6666666666666666,
+     "levier": 1.0,
+     "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.7 ATR -> levier x1",
+     "mise_initiale": 222.2222222222222
+    },
+    "ETH": {
+     "unites": 0.09552603800981051,
+     "prix_moyen": 2326.3,
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "stop": 1589.075338030322,
+     "frais": 0.16666666666666666,
+     "funding": 0.0,
+     "realise": 0.0,
+     "levier_max": 1.0,
+     "etape": 0.6666666666666666,
+     "levier": 1.0,
+     "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.9 ATR -> levier x1",
+     "mise_initiale": 222.2222222222222
+    },
+    "SOL": {
+     "unites": 1.203152258918366,
+     "prix_moyen": 92.35,
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "stop": 56.01094369795381,
+     "frais": 0.08333333333333333,
+     "funding": 0.0,
+     "realise": 0.0,
+     "levier_max": 1.0,
+     "etape": 0.3333333333333333,
+     "levier": 1.0,
+     "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.9 ATR -> levier x1",
+     "mise_initiale": 111.1111111111111
+    }
+   },
+   "attente": {
+    "BTC": 0,
+    "ETH": 0,
+    "SOL": 0
+   },
+   "trades": [],
+   "historique": [
+    [
+     "2026-11-04",
+     999.58
+    ]
+   ],
+   "frais": 0.41666666666666663,
+   "funding": 0.0,
+   "pic": 1000.0,
+   "dd_max": 0.0004166666666667318
+  }
+ },
+ "vue": {
+  "maj": "2026-11-05T15:07:36.596114+00:00",
+  "sources": {
+   "BTC": "Coinbase",
+   "ETH": "Coinbase",
+   "SOL": "Coinbase"
+  },
+  "parametres": {
+   "capital": 1000.0,
+   "frais_pct": 0.075,
+   "funding_an_pct": 10.0,
+   "stop_atr": 8.0
+  },
+  "tokens": {
+   "BTC": {
+    "prix": 77545.0,
+    "cloture": 80428.31,
+    "m50": 81989.6738,
+    "m100": 76820.8965,
+    "m200": 73179.09805,
+    "atr": 2234.2765772340467,
+    "etage": 2,
+    "dist_atr": -0.7,
+    "sortie_totale": 73179.09805,
+    "jour": "2026-11-04"
+   },
+   "ETH": {
+    "prix": 2326.3,
+    "cloture": 2422.27,
+    "m50": 2506.3866,
+    "m100": 2356.8775,
+    "m200": 2156.7629500000003,
+    "atr": 92.15308274620978,
+    "etage": 2,
+    "dist_atr": -0.91,
+    "sortie_totale": 2156.7629500000003,
+    "jour": "2026-11-04"
+   },
+   "SOL": {
+    "prix": 92.35,
+    "cloture": 95.52,
+    "m50": 108.5714,
+    "m100": 98.73540000000001,
+    "m200": 88.92315,
+    "atr": 4.542382037755773,
+    "etage": 1,
+    "dist_atr": -2.87,
+    "sortie_totale": 88.92315,
+    "jour": "2026-11-04"
+   }
+  },
+  "variantes": {
+   "A": {
+    "nom": "A - Prudent x1",
+    "equity": 999.58,
+    "pct": -0.04,
+    "cash": 444.03,
+    "exposition": 555.56,
+    "levier_effectif": 0.56,
+    "baisse_max_pct": 0.0,
+    "nb_trades": 0,
+    "gagnants": 0,
+    "frais": 0.42,
+    "funding": 0.0,
+    "positions": [
+     {
+      "token": "BTC",
+      "sens": "LONG",
+      "levier": 1.0,
+      "etage": 2,
+      "valeur": 222.22,
+      "pct_compte": 22.2,
+      "prix_entree": 77545.0,
+      "prix": 77545.0,
+      "variation_prix_pct": 0.0,
+      "pnl_latent_usd": 0.0,
+      "pnl_net_usd": -0.17,
+      "pnl_pct_compte": -0.02,
+      "stop_protection": 59670.78738212763,
+      "stop_dist_pct": -23.1,
+      "sortie_totale": 73179.09805,
+      "sortie_dist_pct": -5.6,
+      "reduction_prochaine": 76820.8965,
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.7 ATR -> levier x1",
+      "frais": 0.17,
+      "funding": 0.0
+     },
+     {
+      "token": "ETH",
+      "sens": "LONG",
+      "levier": 1.0,
+      "etage": 2,
+      "valeur": 222.22,
+      "pct_compte": 22.2,
+      "prix_entree": 2326.3,
+      "prix": 2326.3,
+      "variation_prix_pct": 0.0,
+      "pnl_latent_usd": 0.0,
+      "pnl_net_usd": -0.17,
+      "pnl_pct_compte": -0.02,
+      "stop_protection": 1589.075338030322,
+      "stop_dist_pct": -31.7,
+      "sortie_totale": 2156.7629500000003,
+      "sortie_dist_pct": -7.3,
+      "reduction_prochaine": 2156.7629500000003,
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.9 ATR -> levier x1",
+      "frais": 0.17,
+      "funding": 0.0
+     },
+     {
+      "token": "SOL",
+      "sens": "LONG",
+      "levier": 1.0,
+      "etage": 1,
+      "valeur": 111.11,
+      "pct_compte": 11.1,
+      "prix_entree": 92.35,
+      "prix": 92.35,
+      "variation_prix_pct": 0.0,
+      "pnl_latent_usd": 0.0,
+      "pnl_net_usd": -0.08,
+      "pnl_pct_compte": -0.01,
+      "stop_protection": 56.01094369795381,
+      "stop_dist_pct": -39.3,
+      "sortie_totale": 88.92315,
+      "sortie_dist_pct": -3.7,
+      "reduction_prochaine": 88.92315,
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.9 ATR -> levier x1",
+      "frais": 0.08,
+      "funding": 0.0
+     }
+    ],
+    "attente": {
+     "BTC": 0,
+     "ETH": 0,
+     "SOL": 0
+    },
+    "trades_recents": []
+   },
+   "B": {
+    "nom": "B - x1,5 fixe",
+    "equity": 999.38,
+    "pct": -0.06,
+    "cash": 166.04,
+    "exposition": 833.33,
+    "levier_effectif": 0.83,
+    "baisse_max_pct": 0.1,
+    "nb_trades": 0,
+    "gagnants": 0,
+    "frais": 0.62,
+    "funding": 0.0,
+    "positions": [
+     {
+      "token": "BTC",
+      "sens": "LONG",
+      "levier": 1.5,
+      "etage": 2,
+      "valeur": 333.33,
+      "pct_compte": 33.4,
+      "prix_entree": 77545.0,
+      "prix": 77545.0,
+      "variation_prix_pct": 0.0,
+      "pnl_latent_usd": 0.0,
+      "pnl_net_usd": -0.25,
+      "pnl_pct_compte": -0.03,
+      "stop_protection": 59670.78738212763,
+      "stop_dist_pct": -23.1,
+      "sortie_totale": 73179.09805,
+      "sortie_dist_pct": -5.6,
+      "reduction_prochaine": 76820.8965,
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.7 ATR -> levier x1.5",
+      "frais": 0.25,
+      "funding": 0.0
+     },
+     {
+      "token": "ETH",
+      "sens": "LONG",
+      "levier": 1.5,
+      "etage": 2,
+      "valeur": 333.33,
+      "pct_compte": 33.4,
+      "prix_entree": 2326.3,
+      "prix": 2326.3,
+      "variation_prix_pct": 0.0,
+      "pnl_latent_usd": 0.0,
+      "pnl_net_usd": -0.25,
+      "pnl_pct_compte": -0.03,
+      "stop_protection": 1589.075338030322,
+      "stop_dist_pct": -31.7,
+      "sortie_totale": 2156.7629500000003,
+      "sortie_dist_pct": -7.3,
+      "reduction_prochaine": 2156.7629500000003,
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.9 ATR -> levier x1.5",
+      "frais": 0.25,
+      "funding": 0.0
+     },
+     {
+      "token": "SOL",
+      "sens": "LONG",
+      "levier": 1.5,
+      "etage": 1,
+      "valeur": 166.67,
+      "pct_compte": 16.7,
+      "prix_entree": 92.35,
+      "prix": 92.35,
+      "variation_prix_pct": 0.0,
+      "pnl_latent_usd": 0.0,
+      "pnl_net_usd": -0.12,
+      "pnl_pct_compte": -0.01,
+      "stop_protection": 56.01094369795381,
+      "stop_dist_pct": -39.3,
+      "sortie_totale": 88.92315,
+      "sortie_dist_pct": -3.7,
+      "reduction_prochaine": 88.92315,
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.9 ATR -> levier x1.5",
+      "frais": 0.12,
+      "funding": 0.0
+     }
+    ],
+    "attente": {
+     "BTC": 0,
+     "ETH": 0,
+     "SOL": 0
+    },
+    "trades_recents": []
+   },
+   "C": {
+    "nom": "C - Module (max x1,5)",
+    "equity": 999.58,
+    "pct": -0.04,
+    "cash": 444.03,
+    "exposition": 555.56,
+    "levier_effectif": 0.56,
+    "baisse_max_pct": 0.0,
+    "nb_trades": 0,
+    "gagnants": 0,
+    "frais": 0.42,
+    "funding": 0.0,
+    "positions": [
+     {
+      "token": "BTC",
+      "sens": "LONG",
+      "levier": 1.0,
+      "etage": 2,
+      "valeur": 222.22,
+      "pct_compte": 22.2,
+      "prix_entree": 77545.0,
+      "prix": 77545.0,
+      "variation_prix_pct": 0.0,
+      "pnl_latent_usd": 0.0,
+      "pnl_net_usd": -0.17,
+      "pnl_pct_compte": -0.02,
+      "stop_protection": 59670.78738212763,
+      "stop_dist_pct": -23.1,
+      "sortie_totale": 73179.09805,
+      "sortie_dist_pct": -5.6,
+      "reduction_prochaine": 76820.8965,
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.7 ATR -> levier x1",
+      "frais": 0.17,
+      "funding": 0.0
+     },
+     {
+      "token": "ETH",
+      "sens": "LONG",
+      "levier": 1.0,
+      "etage": 2,
+      "valeur": 222.22,
+      "pct_compte": 22.2,
+      "prix_entree": 2326.3,
+      "prix": 2326.3,
+      "variation_prix_pct": 0.0,
+      "pnl_latent_usd": 0.0,
+      "pnl_net_usd": -0.17,
+      "pnl_pct_compte": -0.02,
+      "stop_protection": 1589.075338030322,
+      "stop_dist_pct": -31.7,
+      "sortie_totale": 2156.7629500000003,
+      "sortie_dist_pct": -7.3,
+      "reduction_prochaine": 2156.7629500000003,
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "raison": "2/3 moyennes depassees (MM50 non, MM100 ok, MM200 ok), distance MM50 -0.9 ATR -> levier x1",
+      "frais": 0.17,
+      "funding": 0.0
+     },
+     {
+      "token": "SOL",
+      "sens": "LONG",
+      "levier": 1.0,
+      "etage": 1,
+      "valeur": 111.11,
+      "pct_compte": 11.1,
+      "prix_entree": 92.35,
+      "prix": 92.35,
+      "variation_prix_pct": 0.0,
+      "pnl_latent_usd": 0.0,
+      "pnl_net_usd": -0.08,
+      "pnl_pct_compte": -0.01,
+      "stop_protection": 56.01094369795381,
+      "stop_dist_pct": -39.3,
+      "sortie_totale": 88.92315,
+      "sortie_dist_pct": -3.7,
+      "reduction_prochaine": 88.92315,
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.9 ATR -> levier x1",
+      "frais": 0.08,
+      "funding": 0.0
+     }
+    ],
+    "attente": {
+     "BTC": 0,
+     "ETH": 0,
+     "SOL": 0
+    },
+    "trades_recents": []
+   }
+  },
+  "garder": {
+   "equity": 1000.0,
+   "pct": 0.0
+  }
+ }
+}
