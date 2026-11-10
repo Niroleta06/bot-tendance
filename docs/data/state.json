@@ -2,7 +2,7 @@
  "version": 1,
  "cree": "2026-11-05T15:07:36.596114+00:00",
  "capital": 1000.0,
- "derniere_maj": "2026-11-10T14:01:03.642126+00:00",
+ "derniere_maj": "2026-11-10T15:01:04.066353+00:00",
  "dernier_jour": "2026-11-09",
  "base_prix": {
   "BTC": 77545.0,
@@ -37,7 +37,7 @@
  ],
  "variantes": {
   "A": {
-   "cash": 863.7771492315609,
+   "cash": 863.7759321595001,
    "positions": {
     "BTC": {
      "unites": 0.0014370753056721964,
@@ -45,7 +45,7 @@
      "ouverture": "2026-11-05T15:07:36.596114+00:00",
      "stop": 59670.78738212763,
      "frais": 0.24806295795753996,
-     "funding": 0.15803847776161378,
+     "funding": 0.1592555498223691,
      "realise": -2.255829256040666,
      "levier_max": 1.0,
      "etape": 0.3333333333333333,
@@ -112,12 +112,12 @@
     ]
    ],
    "frais": 0.7319917145894853,
-   "funding": 0.3687007287172205,
+   "funding": 0.3699178007779758,
    "pic": 1000.0,
    "dd_max": 0.030308992406598678
   },
   "B": {
-   "cash": 797.1997907321828,
+   "cash": 797.1979813639992,
    "positions": {
     "BTC": {
      "unites": 0.0021364374545945336,
@@ -125,7 +125,7 @@
      "ouverture": "2026-11-05T15:07:36.596114+00:00",
      "stop": 59670.78738212763,
      "frais": 0.37318695168404453,
-     "funding": 0.2352431679595569,
+     "funding": 0.23705253614316926,
      "realise": -3.4140220047408283,
      "levier_max": 1.5,
      "etape": 0.3333333333333333,
@@ -192,12 +192,12 @@
     ]
    ],
    "frais": 1.0991367272911603,
-   "funding": 0.5500422620730192,
+   "funding": 0.5518516302566315,
    "pic": 1000.0,
    "dd_max": 0.045342675155494616
   },
   "C": {
-   "cash": 863.7771492315609,
+   "cash": 863.7759321595001,
    "positions": {
     "BTC": {
      "unites": 0.0014370753056721964,
@@ -205,7 +205,7 @@
      "ouverture": "2026-11-05T15:07:36.596114+00:00",
      "stop": 59670.78738212763,
      "frais": 0.24806295795753996,
-     "funding": 0.15803847776161378,
+     "funding": 0.1592555498223691,
      "realise": -2.255829256040666,
      "levier_max": 1.0,
      "etape": 0.3333333333333333,
@@ -272,13 +272,13 @@
     ]
    ],
    "frais": 0.7319917145894853,
-   "funding": 0.3687007287172205,
+   "funding": 0.3699178007779758,
    "pic": 1000.0,
    "dd_max": 0.030308992406598678
   }
  },
  "vue": {
-  "maj": "2026-11-10T14:01:03.642126+00:00",
+  "maj": "2026-11-10T15:01:04.066353+00:00",
   "sources": {
    "BTC": "Coinbase",
    "ETH": "Coinbase",
@@ -292,7 +292,7 @@
   },
   "tokens": {
    "BTC": {
-    "prix": 73700.98,
+    "prix": 74180.49,
     "cloture": 75259.28,
     "m50": 81623.7758,
     "m100": 77415.0181,
@@ -304,7 +304,7 @@
     "jour": "2026-11-09"
    },
    "ETH": {
-    "prix": 2063.18,
+    "prix": 2079.24,
     "cloture": 2132.15,
     "m50": 2470.6794,
     "m100": 2372.0271,
@@ -316,7 +316,7 @@
     "jour": "2026-11-09"
    },
    "SOL": {
-    "prix": 84.12,
+    "prix": 84.1,
     "cloture": 86.62,
     "m50": 106.7108,
     "m100": 99.4906,
@@ -331,10 +331,10 @@
   "variantes": {
    "A": {
     "nom": "A - Prudent x1",
-    "equity": 969.69,
-    "pct": -3.03,
+    "equity": 970.38,
+    "pct": -2.96,
     "cash": 863.78,
-    "exposition": 105.91,
+    "exposition": 106.6,
     "levier_effectif": 0.11,
     "baisse_max_pct": 3.0,
     "nb_trades": 2,
@@ -347,18 +347,18 @@
       "sens": "LONG",
       "levier": 1.0,
       "etage": 1,
-      "valeur": 105.91,
-      "pct_compte": 10.9,
+      "valeur": 106.6,
+      "pct_compte": 11.0,
       "prix_entree": 77545.0,
-      "prix": 73700.98,
-      "variation_prix_pct": -4.96,
-      "pnl_latent_usd": -5.52,
-      "pnl_net_usd": -8.19,
-      "pnl_pct_compte": -0.84,
+      "prix": 74180.49,
+      "variation_prix_pct": -4.34,
+      "pnl_latent_usd": -4.84,
+      "pnl_net_usd": -7.5,
+      "pnl_pct_compte": -0.77,
       "stop_protection": 59670.78738212763,
-      "stop_dist_pct": -19.0,
+      "stop_dist_pct": -19.6,
       "sortie_totale": 73153.80305,
-      "sortie_dist_pct": -0.7,
+      "sortie_dist_pct": -1.4,
       "reduction_prochaine": 73153.80305,
       "ouverture": "2026-11-05T15:07:36.596114+00:00",
       "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.4 ATR -> levier x1",
@@ -400,11 +400,11 @@
    },
    "B": {
     "nom": "B - x1,5 fixe",
-    "equity": 954.66,
-    "pct": -4.53,
+    "equity": 955.68,
+    "pct": -4.43,
     "cash": 797.2,
-    "exposition": 157.46,
-    "levier_effectif": 0.16,
+    "exposition": 158.48,
+    "levier_effectif": 0.17,
     "baisse_max_pct": 4.5,
     "nb_trades": 2,
     "gagnants": 0,
@@ -416,18 +416,18 @@
       "sens": "LONG",
       "levier": 1.5,
       "etage": 1,
-      "valeur": 157.46,
-      "pct_compte": 16.5,
+      "valeur": 158.48,
+      "pct_compte": 16.6,
       "prix_entree": 77545.0,
-      "prix": 73700.98,
-      "variation_prix_pct": -4.96,
-      "pnl_latent_usd": -8.21,
-      "pnl_net_usd": -12.23,
-      "pnl_pct_compte": -1.28,
+      "prix": 74180.49,
+      "variation_prix_pct": -4.34,
+      "pnl_latent_usd": -7.19,
+      "pnl_net_usd": -11.21,
+      "pnl_pct_compte": -1.17,
       "stop_protection": 59670.78738212763,
-      "stop_dist_pct": -19.0,
+      "stop_dist_pct": -19.6,
       "sortie_totale": 73153.80305,
-      "sortie_dist_pct": -0.7,
+      "sortie_dist_pct": -1.4,
       "reduction_prochaine": 73153.80305,
       "ouverture": "2026-11-05T15:07:36.596114+00:00",
       "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.4 ATR -> levier x1.5",
@@ -469,10 +469,10 @@
    },
    "C": {
     "nom": "C - Module (max x1,5)",
-    "equity": 969.69,
-    "pct": -3.03,
+    "equity": 970.38,
+    "pct": -2.96,
     "cash": 863.78,
-    "exposition": 105.91,
+    "exposition": 106.6,
     "levier_effectif": 0.11,
     "baisse_max_pct": 3.0,
     "nb_trades": 2,
@@ -485,18 +485,18 @@
       "sens": "LONG",
       "levier": 1.0,
       "etage": 1,
-      "valeur": 105.91,
-      "pct_compte": 10.9,
+      "valeur": 106.6,
+      "pct_compte": 11.0,
       "prix_entree": 77545.0,
-      "prix": 73700.98,
-      "variation_prix_pct": -4.96,
-      "pnl_latent_usd": -5.52,
-      "pnl_net_usd": -8.19,
-      "pnl_pct_compte": -0.84,
+      "prix": 74180.49,
+      "variation_prix_pct": -4.34,
+      "pnl_latent_usd": -4.84,
+      "pnl_net_usd": -7.5,
+      "pnl_pct_compte": -0.77,
       "stop_protection": 59670.78738212763,
-      "stop_dist_pct": -19.0,
+      "stop_dist_pct": -19.6,
       "sortie_totale": 73153.80305,
-      "sortie_dist_pct": -0.7,
+      "sortie_dist_pct": -1.4,
       "reduction_prochaine": 73153.80305,
       "ouverture": "2026-11-05T15:07:36.596114+00:00",
       "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.4 ATR -> levier x1",
@@ -538,8 +538,8 @@
    }
   },
   "garder": {
-   "equity": 916.07,
-   "pct": -8.39
+   "equity": 920.36,
+   "pct": -7.96
   }
  }
 }
