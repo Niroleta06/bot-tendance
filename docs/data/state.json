@@ -2,8 +2,8 @@
  "version": 1,
  "cree": "2026-11-05T15:07:36.596114+00:00",
  "capital": 1000.0,
- "derniere_maj": "2026-11-12T23:00:56.132665+00:00",
- "dernier_jour": "2026-11-11",
+ "derniere_maj": "2026-11-13T00:00:56.782940+00:00",
+ "dernier_jour": "2026-11-12",
  "base_prix": {
   "BTC": 77545.0,
   "ETH": 2326.3,
@@ -41,27 +41,16 @@
   [
    "2026-11-11",
    913.4
+  ],
+  [
+   "2026-11-12",
+   890.44
   ]
  ],
  "variantes": {
   "A": {
-   "cash": 863.7085824720328,
-   "positions": {
-    "BTC": {
-     "unites": 0.0014370753056721964,
-     "prix_moyen": 77545.0,
-     "ouverture": "2026-11-05T15:07:36.596114+00:00",
-     "stop": 59670.78738212763,
-     "frais": 0.24806295795753996,
-     "funding": 0.22660523728982407,
-     "realise": -2.255829256040666,
-     "levier_max": 1.0,
-     "etape": 0.3333333333333333,
-     "levier": 1.0,
-     "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.4 ATR -> levier x1",
-     "mise_initiale": 222.2222222222222
-    }
-   },
+   "cash": 966.1421396454593,
+   "positions": {},
    "attente": {
     "BTC": 0,
     "ETH": 0,
@@ -89,6 +78,18 @@
      "prix_sortie": 86.45,
      "variation_prix_pct": -6.39,
      "net_usd": -7.36,
+     "levier_max": 1.0,
+     "raison_sortie": "prix sous les 3 moyennes (fin de tendance)"
+    },
+    {
+     "token": "BTC",
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "cloture": "2026-11-13T00:00:56.782940+00:00",
+     "duree_jours": 7.4,
+     "prix_entree": 77545.0,
+     "prix_sortie": 71333.5,
+     "variation_prix_pct": -8.01,
+     "net_usd": -11.73,
      "levier_max": 1.0,
      "raison_sortie": "prix sous les 3 moyennes (fin de tendance)"
     }
@@ -125,31 +126,20 @@
     [
      "2026-11-11",
      970.12
+    ],
+    [
+     "2026-11-12",
+     966.14
     ]
    ],
-   "frais": 0.7319917145894853,
-   "funding": 0.43726748824543055,
+   "frais": 0.808875423077361,
+   "funding": 0.4384379234987279,
    "pic": 1000.0,
-   "dd_max": 0.033738590891032816
+   "dd_max": 0.033857860354540636
   },
   "B": {
-   "cash": 797.0978555081776,
-   "positions": {
-    "BTC": {
-     "unites": 0.0021364374545945336,
-     "prix_moyen": 77545.0,
-     "ouverture": "2026-11-05T15:07:36.596114+00:00",
-     "stop": 59670.78738212763,
-     "frais": 0.37318695168404453,
-     "funding": 0.33717839196490185,
-     "realise": -3.4140220047408283,
-     "levier_max": 1.5,
-     "etape": 0.3333333333333333,
-     "levier": 1.5,
-     "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.4 ATR -> levier x1.5",
-     "mise_initiale": 333.3333333333333
-    }
-   },
+   "cash": 949.3813769693543,
+   "positions": {},
    "attente": {
     "BTC": 0,
     "ETH": 0,
@@ -177,6 +167,18 @@
      "prix_sortie": 86.45,
      "variation_prix_pct": -6.39,
      "net_usd": -11.04,
+     "levier_max": 1.5,
+     "raison_sortie": "prix sous les 3 moyennes (fin de tendance)"
+    },
+    {
+     "token": "BTC",
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "cloture": "2026-11-13T00:00:56.782940+00:00",
+     "duree_jours": 7.4,
+     "prix_entree": 77545.0,
+     "prix_sortie": 71333.5,
+     "variation_prix_pct": -8.01,
+     "net_usd": -17.51,
      "levier_max": 1.5,
      "raison_sortie": "prix sous les 3 moyennes (fin de tendance)"
     }
@@ -213,31 +215,20 @@
     [
      "2026-11-11",
      955.3
+    ],
+    [
+     "2026-11-12",
+     949.38
     ]
    ],
-   "frais": 1.0991367272911603,
-   "funding": 0.651977486078364,
+   "frais": 1.2134363981666496,
+   "funding": 0.653717521345446,
    "pic": 1000.0,
-   "dd_max": 0.05044131029830545
+   "dd_max": 0.05061862303064568
   },
   "C": {
-   "cash": 863.7085824720328,
-   "positions": {
-    "BTC": {
-     "unites": 0.0014370753056721964,
-     "prix_moyen": 77545.0,
-     "ouverture": "2026-11-05T15:07:36.596114+00:00",
-     "stop": 59670.78738212763,
-     "frais": 0.24806295795753996,
-     "funding": 0.22660523728982407,
-     "realise": -2.255829256040666,
-     "levier_max": 1.0,
-     "etape": 0.3333333333333333,
-     "levier": 1.0,
-     "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.4 ATR -> levier x1",
-     "mise_initiale": 222.2222222222222
-    }
-   },
+   "cash": 966.1421396454593,
+   "positions": {},
    "attente": {
     "BTC": 0,
     "ETH": 0,
@@ -265,6 +256,18 @@
      "prix_sortie": 86.45,
      "variation_prix_pct": -6.39,
      "net_usd": -7.36,
+     "levier_max": 1.0,
+     "raison_sortie": "prix sous les 3 moyennes (fin de tendance)"
+    },
+    {
+     "token": "BTC",
+     "ouverture": "2026-11-05T15:07:36.596114+00:00",
+     "cloture": "2026-11-13T00:00:56.782940+00:00",
+     "duree_jours": 7.4,
+     "prix_entree": 77545.0,
+     "prix_sortie": 71333.5,
+     "variation_prix_pct": -8.01,
+     "net_usd": -11.73,
      "levier_max": 1.0,
      "raison_sortie": "prix sous les 3 moyennes (fin de tendance)"
     }
@@ -301,16 +304,20 @@
     [
      "2026-11-11",
      970.12
+    ],
+    [
+     "2026-11-12",
+     966.14
     ]
    ],
-   "frais": 0.7319917145894853,
-   "funding": 0.43726748824543055,
+   "frais": 0.808875423077361,
+   "funding": 0.4384379234987279,
    "pic": 1000.0,
-   "dd_max": 0.033738590891032816
+   "dd_max": 0.033857860354540636
   }
  },
  "vue": {
-  "maj": "2026-11-12T23:00:56.132665+00:00",
+  "maj": "2026-11-13T00:00:56.782940+00:00",
   "sources": {
    "BTC": "Coinbase",
    "ETH": "Coinbase",
@@ -324,86 +331,74 @@
   },
   "tokens": {
    "BTC": {
-    "prix": 71362.18,
-    "cloture": 73927.63,
-    "m50": 81120.42599999999,
-    "m100": 77621.6131,
-    "m200": 73116.36795,
-    "atr": 2270.8421967785707,
-    "etage": 1,
-    "dist_atr": -3.17,
-    "sortie_totale": 73116.36795,
-    "jour": "2026-11-11"
+    "prix": 71333.5,
+    "cloture": 71333.5,
+    "m50": 80859.5298,
+    "m100": 77694.443,
+    "m200": 73079.6663,
+    "atr": 2331.189897008673,
+    "etage": 0,
+    "dist_atr": -4.09,
+    "sortie_totale": 73079.6663,
+    "jour": "2026-11-12"
    },
    "ETH": {
-    "prix": 2011.62,
-    "cloture": 2053.73,
-    "m50": 2442.1864,
-    "m100": 2375.6472,
-    "m200": 2150.8607500000003,
-    "atr": 96.41495166279101,
+    "prix": 2016.55,
+    "cloture": 2016.55,
+    "m50": 2428.8398,
+    "m100": 2377.1288,
+    "m200": 2149.0911499999997,
+    "atr": 95.41745511544882,
     "etage": 0,
-    "dist_atr": -4.03,
-    "sortie_totale": 2150.8607500000003,
-    "jour": "2026-11-11"
+    "dist_atr": -4.32,
+    "sortie_totale": 2149.0911499999997,
+    "jour": "2026-11-12"
    },
    "SOL": {
-    "prix": 81.26,
-    "cloture": 83.18,
-    "m50": 105.29,
-    "m100": 99.68450000000001,
-    "m200": 88.96325,
-    "atr": 4.459555004683201,
+    "prix": 81.69,
+    "cloture": 81.69,
+    "m50": 104.624,
+    "m100": 99.76440000000001,
+    "m200": 88.93695,
+    "atr": 4.388158218634401,
     "etage": 0,
-    "dist_atr": -4.96,
-    "sortie_totale": 88.96325,
-    "jour": "2026-11-11"
+    "dist_atr": -5.23,
+    "sortie_totale": 88.93695,
+    "jour": "2026-11-12"
    }
   },
   "variantes": {
    "A": {
     "nom": "A - Prudent x1",
-    "equity": 966.26,
-    "pct": -3.37,
-    "cash": 863.71,
-    "exposition": 102.55,
-    "levier_effectif": 0.11,
+    "equity": 966.14,
+    "pct": -3.39,
+    "cash": 966.14,
+    "exposition": 0,
+    "levier_effectif": 0.0,
     "baisse_max_pct": 3.4,
-    "nb_trades": 2,
+    "nb_trades": 3,
     "gagnants": 0,
-    "frais": 0.73,
+    "frais": 0.81,
     "funding": 0.44,
-    "positions": [
-     {
-      "token": "BTC",
-      "sens": "LONG",
-      "levier": 1.0,
-      "etage": 1,
-      "valeur": 102.55,
-      "pct_compte": 10.6,
-      "prix_entree": 77545.0,
-      "prix": 71362.18,
-      "variation_prix_pct": -7.97,
-      "pnl_latent_usd": -8.89,
-      "pnl_net_usd": -11.62,
-      "pnl_pct_compte": -1.2,
-      "stop_protection": 59670.78738212763,
-      "stop_dist_pct": -16.4,
-      "sortie_totale": 73116.36795,
-      "sortie_dist_pct": 2.5,
-      "reduction_prochaine": null,
-      "ouverture": "2026-11-05T15:07:36.596114+00:00",
-      "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.4 ATR -> levier x1",
-      "frais": 0.25,
-      "funding": 0.23
-     }
-    ],
+    "positions": [],
     "attente": {
      "BTC": 0,
      "ETH": 0,
      "SOL": 0
     },
     "trades_recents": [
+     {
+      "token": "BTC",
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "cloture": "2026-11-13T00:00:56.782940+00:00",
+      "duree_jours": 7.4,
+      "prix_entree": 77545.0,
+      "prix_sortie": 71333.5,
+      "variation_prix_pct": -8.01,
+      "net_usd": -11.73,
+      "levier_max": 1.0,
+      "raison_sortie": "prix sous les 3 moyennes (fin de tendance)"
+     },
      {
       "token": "SOL",
       "ouverture": "2026-11-05T15:07:36.596114+00:00",
@@ -432,47 +427,35 @@
    },
    "B": {
     "nom": "B - x1,5 fixe",
-    "equity": 949.56,
-    "pct": -5.04,
-    "cash": 797.1,
-    "exposition": 152.46,
-    "levier_effectif": 0.16,
-    "baisse_max_pct": 5.0,
-    "nb_trades": 2,
+    "equity": 949.38,
+    "pct": -5.06,
+    "cash": 949.38,
+    "exposition": 0,
+    "levier_effectif": 0.0,
+    "baisse_max_pct": 5.1,
+    "nb_trades": 3,
     "gagnants": 0,
-    "frais": 1.1,
+    "frais": 1.21,
     "funding": 0.65,
-    "positions": [
-     {
-      "token": "BTC",
-      "sens": "LONG",
-      "levier": 1.5,
-      "etage": 1,
-      "valeur": 152.46,
-      "pct_compte": 16.1,
-      "prix_entree": 77545.0,
-      "prix": 71362.18,
-      "variation_prix_pct": -7.97,
-      "pnl_latent_usd": -13.21,
-      "pnl_net_usd": -17.33,
-      "pnl_pct_compte": -1.83,
-      "stop_protection": 59670.78738212763,
-      "stop_dist_pct": -16.4,
-      "sortie_totale": 73116.36795,
-      "sortie_dist_pct": 2.5,
-      "reduction_prochaine": null,
-      "ouverture": "2026-11-05T15:07:36.596114+00:00",
-      "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.4 ATR -> levier x1.5",
-      "frais": 0.37,
-      "funding": 0.34
-     }
-    ],
+    "positions": [],
     "attente": {
      "BTC": 0,
      "ETH": 0,
      "SOL": 0
     },
     "trades_recents": [
+     {
+      "token": "BTC",
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "cloture": "2026-11-13T00:00:56.782940+00:00",
+      "duree_jours": 7.4,
+      "prix_entree": 77545.0,
+      "prix_sortie": 71333.5,
+      "variation_prix_pct": -8.01,
+      "net_usd": -17.51,
+      "levier_max": 1.5,
+      "raison_sortie": "prix sous les 3 moyennes (fin de tendance)"
+     },
      {
       "token": "SOL",
       "ouverture": "2026-11-05T15:07:36.596114+00:00",
@@ -501,47 +484,35 @@
    },
    "C": {
     "nom": "C - Module (max x1,5)",
-    "equity": 966.26,
-    "pct": -3.37,
-    "cash": 863.71,
-    "exposition": 102.55,
-    "levier_effectif": 0.11,
+    "equity": 966.14,
+    "pct": -3.39,
+    "cash": 966.14,
+    "exposition": 0,
+    "levier_effectif": 0.0,
     "baisse_max_pct": 3.4,
-    "nb_trades": 2,
+    "nb_trades": 3,
     "gagnants": 0,
-    "frais": 0.73,
+    "frais": 0.81,
     "funding": 0.44,
-    "positions": [
-     {
-      "token": "BTC",
-      "sens": "LONG",
-      "levier": 1.0,
-      "etage": 1,
-      "valeur": 102.55,
-      "pct_compte": 10.6,
-      "prix_entree": 77545.0,
-      "prix": 71362.18,
-      "variation_prix_pct": -7.97,
-      "pnl_latent_usd": -8.89,
-      "pnl_net_usd": -11.62,
-      "pnl_pct_compte": -1.2,
-      "stop_protection": 59670.78738212763,
-      "stop_dist_pct": -16.4,
-      "sortie_totale": 73116.36795,
-      "sortie_dist_pct": 2.5,
-      "reduction_prochaine": null,
-      "ouverture": "2026-11-05T15:07:36.596114+00:00",
-      "raison": "1/3 moyennes depassees (MM50 non, MM100 non, MM200 ok), distance MM50 -2.4 ATR -> levier x1",
-      "frais": 0.25,
-      "funding": 0.23
-     }
-    ],
+    "positions": [],
     "attente": {
      "BTC": 0,
      "ETH": 0,
      "SOL": 0
     },
     "trades_recents": [
+     {
+      "token": "BTC",
+      "ouverture": "2026-11-05T15:07:36.596114+00:00",
+      "cloture": "2026-11-13T00:00:56.782940+00:00",
+      "duree_jours": 7.4,
+      "prix_entree": 77545.0,
+      "prix_sortie": 71333.5,
+      "variation_prix_pct": -8.01,
+      "net_usd": -11.73,
+      "levier_max": 1.0,
+      "raison_sortie": "prix sous les 3 moyennes (fin de tendance)"
+     },
      {
       "token": "SOL",
       "ouverture": "2026-11-05T15:07:36.596114+00:00",
@@ -570,8 +541,8 @@
    }
   },
   "garder": {
-   "equity": 888.3,
-   "pct": -11.17
+   "equity": 890.44,
+   "pct": -10.96
   }
  }
 }
